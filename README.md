@@ -76,8 +76,8 @@ The **Gravity Books Data Warehouse Project** is a **Business Intelligence (BI) s
   3️⃣ **Load**: Inserted the transformed data into the **data warehouse tables**.
 
 🔹 6. Implementing Incremental Load
-To optimize data processing and reduce resource consumption, we implemented an Incremental Load strategy in our ETL pipeline. This approach ensures that only new or updated records are loaded into the data warehouse, eliminating the need for full data reloads.
-https://raw.githubusercontent.com/dinaibrahim6/Gravity_BookStore/refs/heads/main/Incremental%20load/Incremental_Load_.webp
+  - To optimize data processing and reduce resource consumption, we implemented an Incremental Load strategy in our ETL pipeline. This approach ensures that only new or updated records are loaded into the data warehouse, eliminating the need for full data reloads.
+
  ![Increamental Load](https://raw.githubusercontent.com/dinaibrahim6/Gravity_BookStore/refs/heads/main/Incremental%20load/Incremental_Load_.webp)  
 📌 What is Incremental Load?
 Incremental Load is a data integration strategy that processes only new or modified records from the source system, rather than reloading the entire dataset.
