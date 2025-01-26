@@ -66,11 +66,37 @@ Here are the visual representations of the dimension and fact tables:
 
 ### 6. Design an SSAS Project (Tabular Mode)
 - Created an SSAS (SQL Server Analysis Services) Tabular model project to enable OLAP capabilities.
-- Defined the following key deliverables:
-  - **Measures**: Defined KPIs such as total sales, revenue per category, and sales growth.
-  - **Relationships**: Established relationships between fact and dimension tables within the model.
-  - **Hierarchies**: Created hierarchies for dimensions like `Category` and `Date`.
-- Deployed the SSAS project and browsed the cube using tools such as SQL Server Data Tools (SSDT) and Excel.
+
+Now we are in the analysis phase of the project.
+The Gravity Books Project is a data analysis designed to provide insights into sales data. The data is stored in a star schema data warehouse, and restored in SQL Server Management Studio (SSMS). We use the data warehouse to create an Analysis Services Tabular Model using SQL Server Analysis Services (SSAS) in Visual Studio.
+Why Tabular Mode?
+Simplicity: Tabular models are easier to design and work with compared to multidimensional models.
+Performance: Optimized for in-memory processing, making it faster for querying and calculations.
+Integration: Compatible with modern visualization tools like Power BI.
+Overview of the steps done:
+-	In Visual Studio, a new Analysis Services Tabular Model Project was created and connected to the SQL Server database.
+-	The tables were imported from the data warehouse, and relationships were established using surrogate keys.
+  ![Model](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Model.PNG?raw=true)
+ 
+-	Creating Measures
+With the imported data, measures were created using DAX (Data Analysis Expressions) to derive key insights:
+  ![Measures](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Measures.PNG?raw=true)
+ 
+-	Results and Insights
+The calculated measures provide the following insights:
+1. Sales Performance:
+Total sales: $154,714.88.
+Average book price: $10.05.
+Total books sold: 15,400.
+2. Customer Analysis:
+Number of unique customers: 1,715.
+Average transactions per customer: 9.
+3. Order Analysis:
+Total number of orders: 7,515.
+Average order value: $20.49.
+4. Shipping Costs:
+Total shipping cost: $83,245.00.
+Average shipping cost: $11.03.
 
 ### 7. BI Self-Service Reporting
 - Designed and developed interactive self-service reports using Power BI.
