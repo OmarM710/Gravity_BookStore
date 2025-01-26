@@ -1,69 +1,86 @@
-# Gravity Books Data Warehouse Project
 
-## Overview
-This project focuses on the development of a data warehouse solution for the `gravity_books` transactional database. The objective is to implement a robust Business Intelligence (BI) solution, enabling efficient data analysis and reporting. Below are the main steps and deliverables of the project, presented in detail.
+# 📚 Gravity Books Data Warehouse Project  
 
-## Project Steps
-### 1. Create the `gravity_books` Database
-- Designed and implemented the `gravity_books` transactional database in SQL Server.
-- Defined normalized schemas to support efficient transactional operations.
-- Populated the database with sample transactional data, including tables such as:
-  - `Books`
-  - `Authors`
-  - `Sales`
-  - `Customers`
-  - `Categories`
+## 📌 Overview  
+The **Gravity Books Data Warehouse Project** is a **Business Intelligence (BI) solution** designed to enhance **data analysis and reporting** for the `gravity_books` transactional database. This project involves designing a **data warehouse (DWH)** using a **star schema model**, implementing **ETL processes**, and enabling **self-service reporting** for insightful business decisions.  
 
-### 2. Design the Data Warehouse Model
-- Analyzed the transactional database to define the dimensional modeling approach.
-- Created a star schema to ensure simplicity and efficiency in analytical queries.
-- Defined the following key components:
-  - **Fact Table**: `Sales_Fact`
-  - **Dimension Tables**:
-    - `Book_Dim`
-    - `Author_Dim`
-    - `Customer_Dim`
-    - `Category_Dim`
-    - `Date_Dim`
+## 🚀 Project Steps  
 
-#### Visualizations of the Data Warehouse Model
-Here are the visual representations of the dimension and fact tables:
+### 🔹 1. Creating the `gravity_books` Database  
+- Designed and implemented the **`gravity_books` transactional database** in **SQL Server**.  
+- Ensured the **schema was normalized** to optimize data integrity and reduce redundancy.  
+- Populated the database with sample transactional data, including the following tables:  
+  - 📚 `Books`  
+  - ✍️ `Authors`  
+  - 💰 `Sales`  
+  - 👥 `Customers`  
+  - 🏷️ `Categories`  
 
-- **DimBook Table**:
-  ![DimBook](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimBook.png?raw=true)
+---  
 
-- **DimCustomer Table**:
-  ![DimCustomer](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimCustomer.png?raw=true)
+### 🔹 2. Designing the Data Warehouse Model  
+- **Analyzed the transactional database** to define an optimized **dimensional model** for analytical queries.  
+- Developed a **star schema** for simplicity and efficiency.  
+- Key components of the data warehouse:  
+  - **📊 Fact Table:** `Sales_Fact` (contains transactional sales data).  
+  - **📂 Dimension Tables:**  
+    - 📖 `Book_Dim` (book details).  
+    - ✍️ `Author_Dim` (author details).  
+    - 👥 `Customer_Dim` (customer details).  
+    - 🏷️ `Category_Dim` (book categories).  
+    - 📅 `Date_Dim` (time-related data).  
 
-- **DimShipping Table**:
-  ![DimShipping](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimShipping.png?raw=true)
+#### 📌 Data Warehouse Model Visualizations  
 
-- **Fact Table**:
-  ![Fact](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/Fact%20.png?raw=true)
+- **DimBook Table:**  
+  ![DimBook](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimBook.png?raw=true)  
 
-- **Modified Customers Table**:
-  ![Modified Customers](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/modfied%20cutomers.png?raw=true)
+- **DimCustomer Table:**  
+  ![DimCustomer](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimCustomer.png?raw=true)  
 
-### 3. Implement the Data Warehouse on SQL Server Management Studio (SSMS)
-- Created the `gravity_books_dwh` database in SSMS.
-- Implemented the star schema by creating and indexing the fact and dimension tables.
-- Populated the data warehouse tables with initial data from the transactional database.
+- **DimShipping Table:**  
+  ![DimShipping](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/DimShipping.png?raw=true)  
 
-### 4. Maintain Data Integrity Between Fact and Dimension Tables
-- Designed and implemented SQL scripts to check and maintain referential integrity:
-  - Ensured that all foreign keys in the fact table correspond to valid entries in dimension tables.
-  - Periodically validated data consistency using automated triggers and constraints.
+- **Fact Table:**  
+  ![Fact](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/Fact%20.png?raw=true)  
 
-### 5. ETL Process: Populate Data from `gravity_books` to `gravity_books_dwh`
-- Designed and implemented an ETL (Extract, Transform, Load) process using SQL scripts and tools like SSIS.
-- Steps included:
-  - **Extract**: Retrieved data from the transactional database.
-  - **Transform**: Applied necessary data cleansing and transformations, such as:
-    - Deduplication.
-    - Formatting date fields.
-    - Mapping transactional data to the dimensional model.
-  - **Load**: Inserted the transformed data into the data warehouse tables.
+- **Modified Customers Table:**  
+  ![Modified Customers](https://github.com/OmarM710/Gravity_BookStore/blob/main/screen%20shots/modfied%20cutomers.png?raw=true)  
 
+---  
+
+### 🔹 3. Implementing the Data Warehouse in SQL Server Management Studio (SSMS)  
+- Created the **`gravity_books_dwh` database** in **SSMS**.  
+- Implemented the **star schema**, including indexing and performance optimization.  
+- Populated the data warehouse tables with **transformed and structured data** from the transactional database.  
+
+---  
+
+### 🔹 4. Ensuring Data Integrity Between Fact and Dimension Tables  
+- Implemented **referential integrity constraints** to maintain data consistency.  
+- Designed **SQL scripts** to:  
+  - Ensure all foreign keys in the **fact table** reference valid dimension records.  
+  - Enforce **data validation rules** to prevent anomalies.  
+  - Automate periodic **data consistency checks** using triggers and constraints.  
+
+---  
+
+### 🔹 5. ETL Process: Extract, Transform, Load (ETL)  
+- Developed an **ETL pipeline** using **SQL scripts** and **SSIS (SQL Server Integration Services)** to transfer data from the transactional database to the data warehouse.  
+- **ETL Workflow:**  
+  1️⃣ **Extract**: Pulled data from the **`gravity_books` database**.  
+  2️⃣ **Transform**: Applied data cleansing and structuring:  
+     - ✅ **Removed duplicates**.  
+     - ✅ **Formatted date fields**.  
+     - ✅ **Mapped transactional data** to the **dimensional model**.  
+  3️⃣ **Load**: Inserted the transformed data into the **data warehouse tables**.  
+
+---
+
+## 🏆 Summary  
+This project successfully **transforms raw transactional data** into a **structured data warehouse**, enabling **efficient business intelligence and reporting**. With a **well-optimized star schema** and **ETL processes**, the system supports **fast querying, reporting, and analytics**, providing valuable insights into **sales, customers, and book performance**.  
+
+🚀 **Next Steps:** Implementing **SSAS Tabular Models** and **Power BI dashboards** for advanced analytics and visualization.  
 
 ## 📊 6. Designing an SSAS Project (Tabular Mode)  
 
@@ -115,7 +132,7 @@ By leveraging **SSAS Tabular Mode**, we successfully enabled **fast, scalable, a
 
 ## 📊 BI Self-Service Reporting  
 
-In this phase of the **Gravity Books** project, we designed and developed **interactive self-service reports** using **Power BI** to enhance data-driven decision-making. These reports are connected to an **OLAP cube**, enabling dynamic exploration and in-depth analysis of key business metrics.  
+In this phase of the **Gravity Books** project, we designed and developed **interactive self-service reports** using **Power BI** to enhance data-driven decision-making. These reports are connected to an **Tabular Model**, enabling dynamic exploration and in-depth analysis of key business metrics.  
 
 ### 🔹 Key Deliverables:  
 
@@ -141,7 +158,7 @@ In this phase of the **Gravity Books** project, we designed and developed **inte
 
 ### 💡 Key Features:  
 ✔️ **Self-service capabilities** for ad-hoc analysis by end-users.  
-✔️ **Connected to the OLAP cube** for real-time data exploration.  
+✔️ **Connected to the Tabular Model** for data exploration.  
 ✔️ **Enhanced data visualizations** to support strategic decision-making.  
 
 
