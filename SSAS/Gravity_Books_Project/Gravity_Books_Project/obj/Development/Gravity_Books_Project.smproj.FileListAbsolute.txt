@@ -1,0 +1,7 @@
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\bin\Model.asdatabase
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\bin\Model.deploymenttargets
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\bin\Model.deploymentoptions
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\obj\Development\Gravity_Books_Project.smproj.CoreCompileInputs.cache
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\obj\Development\Model.asdatabase
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\obj\Development\Model.deploymentoptions
+C:\ITI\PowerBI4M\DWH\Project\SSAS\Gravity_Books_Project\Gravity_Books_Project\obj\Development\Model.deploymenttargets
