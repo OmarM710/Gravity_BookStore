@@ -69,7 +69,7 @@ Here are the visual representations of the dimension and fact tables:
 
 As part of the **Gravity Books Project**, we implemented a **SQL Server Analysis Services (SSAS) Tabular Model** to enable **OLAP capabilities** and enhance data analysis.  
 
-### 🔍 Project Overview  
+### 🔍 Overview  
 The **Gravity Books Project** is a **data analysis solution** designed to provide insights into **sales performance, customer trends, and shipping costs**. The data is stored in a **star schema data warehouse** and managed in **SQL Server Management Studio (SSMS)**.  
 
 To analyze this data efficiently, we built an **SSAS Tabular Model** using **SQL Server Analysis Services (SSAS) in Visual Studio**.  
