@@ -73,16 +73,38 @@ The **Gravity Books Data Warehouse Project** is a **Business Intelligence (BI) s
      - ✅ **Removed duplicates**.  
      - ✅ **Formatted date fields**.  
      - ✅ **Mapped transactional data** to the **dimensional model**.  
-  3️⃣ **Load**: Inserted the transformed data into the **data warehouse tables**.  
+  3️⃣ **Load**: Inserted the transformed data into the **data warehouse tables**.
 
----
+🔹 6. Implementing Incremental Load
+To optimize data processing and reduce resource consumption, we implemented an Incremental Load strategy in our ETL pipeline. This approach ensures that only new or updated records are loaded into the data warehouse, eliminating the need for full data reloads.
+https://raw.githubusercontent.com/dinaibrahim6/Gravity_BookStore/refs/heads/main/Incremental%20load/Incremental_Load_.webp
+ ![Increamental Load](https://raw.githubusercontent.com/dinaibrahim6/Gravity_BookStore/refs/heads/main/Incremental%20load/Incremental_Load_.webp)  
+📌 What is Incremental Load?
+Incremental Load is a data integration strategy that processes only new or modified records from the source system, rather than reloading the entire dataset.
+
+🔍 Key Benefits:
+✔️ Efficiency: Processes only new/changed data, reducing resource consumption and runtime.
+✔️ Minimized Impact: Smaller loads mean less strain on the source and target systems.
+✔️ Faster Processing: Works significantly faster than full loads for large datasets.
+✔️ Supports Real-Time Updates: Ideal for near real-time data processing.
+
+🛠️ Implementation Steps:
+1️⃣ Identify New or Updated Records
+  - Used timestamp columns (e.g., LastModifiedDate) in the source database to track changes.
+  - Designed CDC (Change Data Capture) or triggers to detect new and updated records.
+2️⃣ Extract Only Incremental Data
+  - Pulled records where LastModifiedDate > MAX(LastModifiedDate) in DWH.
+3️⃣ Transform & Load
+  - Applied necessary transformations (data cleansing, mapping).
+  - Used MERGE statements or UPSERT logic to insert new records and update existing ones.
+
 
 ## 🏆 Summary  
 This project successfully **transforms raw transactional data** into a **structured data warehouse**, enabling **efficient business intelligence and reporting**. With a **well-optimized star schema** and **ETL processes**, the system supports **fast querying, reporting, and analytics**, providing valuable insights into **sales, customers, and book performance**.  
 
 🚀 **Next Steps:** Implementing **SSAS Tabular Models** and **Power BI dashboards** for advanced analytics and visualization.  
 
-## 📊 6. Designing an SSAS Project (Tabular Mode)  
+## 📊7. Designing an SSAS Project (Tabular Mode)  
 
 As part of the **Gravity Books Project**, we implemented a **SQL Server Analysis Services (SSAS) Tabular Model** to enable **OLAP capabilities** and enhance data analysis.  
 
@@ -130,7 +152,7 @@ To analyze this data efficiently, we built an **SSAS Tabular Model** using **SQL
 ### 📊 Conclusion  
 By leveraging **SSAS Tabular Mode**, we successfully enabled **fast, scalable, and interactive data analysis** for **Gravity Books**. This foundation allows for deeper insights into business performance and **seamless integration with Power BI for self-service reporting**.  
 
-## 📊 BI Self-Service Reporting  
+## 📊 8. BI Self-Service Reporting  
 
 In this phase of the **Gravity Books** project, we designed and developed **interactive self-service reports** using **Power BI** to enhance data-driven decision-making. These reports are connected to an **Tabular Model**, enabling dynamic exploration and in-depth analysis of key business metrics.  
 
