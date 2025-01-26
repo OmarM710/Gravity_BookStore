@@ -64,48 +64,86 @@ Here are the visual representations of the dimension and fact tables:
     - Mapping transactional data to the dimensional model.
   - **Load**: Inserted the transformed data into the data warehouse tables.
 
-### 6. Design an SSAS Project (Tabular Mode)
-- Created an SSAS (SQL Server Analysis Services) Tabular model project to enable OLAP capabilities.
 
-Now we are in the analysis phase of the project.
-The Gravity Books Project is a data analysis designed to provide insights into sales data. The data is stored in a star schema data warehouse, and restored in SQL Server Management Studio (SSMS). We use the data warehouse to create an Analysis Services Tabular Model using SQL Server Analysis Services (SSAS) in Visual Studio.
-Why Tabular Mode?
-Simplicity: Tabular models are easier to design and work with compared to multidimensional models.
-Performance: Optimized for in-memory processing, making it faster for querying and calculations.
-Integration: Compatible with modern visualization tools like Power BI.
-Overview of the steps done:
--	In Visual Studio, a new Analysis Services Tabular Model Project was created and connected to the SQL Server database.
--	The tables were imported from the data warehouse, and relationships were established using surrogate keys.
-  ![Model](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Model.PNG?raw=true)
- 
--	Creating Measures
-With the imported data, measures were created using DAX (Data Analysis Expressions) to derive key insights:
-  ![Measures](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Measures.PNG?raw=true)
- 
--	Results and Insights
-The calculated measures provide the following insights:
-1. Sales Performance:
-Total sales: $154,714.88.
-Average book price: $10.05.
-Total books sold: 15,400.
-2. Customer Analysis:
-Number of unique customers: 1,715.
-Average transactions per customer: 9.
-3. Order Analysis:
-Total number of orders: 7,515.
-Average order value: $20.49.
-4. Shipping Costs:
-Total shipping cost: $83,245.00.
-Average shipping cost: $11.03.
+## 📊 6. Designing an SSAS Project (Tabular Mode)  
 
-### 7. BI Self-Service Reporting
-- Designed and developed interactive self-service reports using Power BI.
-- Connected the reports to the OLAP cube to enable dynamic exploration of the data.
-- Delivered key insights through visualizations, including:
-  - Sales trends over time.
-  - Category-wise revenue distribution.
-  - Customer purchase behavior analysis.
-- Ensured end-users could interact with the reports for ad-hoc analysis.
+As part of the **Gravity Books Project**, we implemented a **SQL Server Analysis Services (SSAS) Tabular Model** to enable **OLAP capabilities** and enhance data analysis.  
+
+### 🔍 Project Overview  
+The **Gravity Books Project** is a **data analysis solution** designed to provide insights into **sales performance, customer trends, and shipping costs**. The data is stored in a **star schema data warehouse** and managed in **SQL Server Management Studio (SSMS)**.  
+
+To analyze this data efficiently, we built an **SSAS Tabular Model** using **SQL Server Analysis Services (SSAS) in Visual Studio**.  
+
+### 🛠️ Why Tabular Mode?  
+✔️ **Simplicity:** Easier to design and manage compared to multidimensional models.  
+✔️ **Performance:** Optimized for in-memory processing, ensuring faster querying and calculations.  
+✔️ **Integration:** Seamlessly connects with modern visualization tools like **Power BI** for reporting.  
+
+### 📌 Steps Taken  
+
+1️⃣ **Created an SSAS Tabular Model Project in Visual Studio**  
+   - Connected the project to the **SQL Server database**.  
+   - Imported tables from the **data warehouse**.  
+   - Established relationships using **surrogate keys**.  
+   - ![Model](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Model.PNG?raw=true)  
+
+2️⃣ **Created Measures using DAX (Data Analysis Expressions)**  
+   - Defined key performance indicators (KPIs) to derive meaningful insights.  
+   - ![Measures](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/SSAS/Measures.PNG?raw=true)  
+
+### 📈 Results and Insights  
+
+#### 🔹 **Sales Performance**  
+- **Total sales:** 💲154,714.88  
+- **Average book price:** 💲10.05  
+- **Total books sold:** 📚 15,400  
+
+#### 🔹 **Customer Analysis**  
+- **Number of unique customers:** 👥 1,715  
+- **Average transactions per customer:** 🔄 9  
+
+#### 🔹 **Order Analysis**  
+- **Total number of orders:** 🛒 7,515  
+- **Average order value:** 💲20.49  
+
+#### 🔹 **Shipping Costs**  
+- **Total shipping cost:** 🚚 💲83,245.00  
+- **Average shipping cost per order:** 💲11.03  
+
+### 📊 Conclusion  
+By leveraging **SSAS Tabular Mode**, we successfully enabled **fast, scalable, and interactive data analysis** for **Gravity Books**. This foundation allows for deeper insights into business performance and **seamless integration with Power BI for self-service reporting**.  
+
+## 📊 BI Self-Service Reporting  
+
+In this phase of the **Gravity Books** project, we designed and developed **interactive self-service reports** using **Power BI** to enhance data-driven decision-making. These reports are connected to an **OLAP cube**, enabling dynamic exploration and in-depth analysis of key business metrics.  
+
+### 🔹 Key Deliverables:  
+
+- **📌 Interactive Dashboard:**  
+  - Provides an **overview of sales, customer trends, and business performance** at a glance.  
+  - Incorporates dynamic filters and drill-through capabilities for deeper insights.  
+  - ![Dashboard](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/Reporting/Dashboard.PNG?raw=true)  
+
+- **📌 Sales Analysis Report:**  
+  - Highlights **sales trends, revenue distribution, and top-performing books**.  
+  - Offers visual breakdowns by region, category, and time periods.  
+  - ![Sales Analysis Report](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/Reporting/Sales.PNG?raw=true)  
+
+- **📌 Book Analysis Report:**  
+  - Focuses on **book performance, pricing trends, and inventory insights**.  
+  - Helps identify best-selling and underperforming books.  
+  - ![Book Analysis Report](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/Reporting/Books.PNG?raw=true)  
+
+- **📌 Ship Method Analysis Report:**  
+  - Analyzes **shipping performance, costs, and delivery efficiency**.  
+  - Assists in optimizing logistics and improving customer satisfaction.  
+  - ![Ship Method Report](https://github.com/dinaibrahim6/Gravity_BookStore/blob/main/Reporting/ShipMethod.PNG?raw=true)  
+
+### 💡 Key Features:  
+✔️ **Self-service capabilities** for ad-hoc analysis by end-users.  
+✔️ **Connected to the OLAP cube** for real-time data exploration.  
+✔️ **Enhanced data visualizations** to support strategic decision-making.  
+
 
 ## Tools and Technologies
 - **Database Management**: SQL Server Management Studio (SSMS)
